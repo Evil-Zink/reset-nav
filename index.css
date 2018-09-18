@@ -1,0 +1,130 @@
+/*reset*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+*::after,*::before{box-sizing: border-box;}
+body{-webkit-tap-highlight-color: rgba(0,0,0,0); font-family: "Helvetica Neue", serif; font-size: 16px;}
+ol,ul{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-weight: none;}
+a{text-decoration:none;}
+
+
+/*layout*/
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background: url('./img/bg.png') no-repeat center center;
+    background-size: cover;
+}
+header{
+    padding-bottom: 80px;
+}
+header > form > input {
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 3px solid #050505;
+    box-sizing: border-box;
+    background: transparent;
+    padding-left: 10px;
+}
+header > form > input:focus{
+    outline: none;
+}
+header > form > a{
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, serif;
+    /* text-decoration: none; */
+    border-radius: 8px;
+    background: rgb(5, 5, 5);
+}
+main > .wrapper{
+    width: 100%;
+    margin: auto;
+}
+main > .wrapper > div{
+    margin: 5px;
+    border: 1px solid transparent;
+}
+main > .wrapper > div:nth-child(2){
+    margin-left: 3em;
+}
+main > .wrapper > div:nth-child(3){
+    margin-left: 6em;
+}
+main > .wrapper > div > kbd{
+    display: inline-block;
+    width: 6em;
+    height: 6em;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 2px;
+    margin: 5px 8px;
+    position: relative;
+    background-color: #000;
+    color: white;
+    border: 1px solid #373737;
+    box-shadow: 0 0 0 1px #1B1C1D, 0 0 0 2px #080808;
+}
+main > .wrapper > div > kbd > span{
+    font-size: 24px;
+    padding: 4px;
+}
+main > .wrapper > div > kbd > button{
+    display: none;
+    padding: 2px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: all .5s;
+    border-radius: 3px;
+}
+main > .wrapper > div > kbd > img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 6px;
+}
+@keyframes waggle{
+    0%{
+        transform: translate3d(-1px, 0, 0);
+    }
+    25%{
+        transform: translate3d(1px, 0, 0);
+    }
+    50%{
+        transform: translate3d(-4px, 0, 0);
+    }
+    75%{
+        transform: translate3d(4px, 0, 0);
+    }
+    100%{
+        transform: translate3d(0, 0, 0);
+    }
+    
+}
+main > .wrapper > div > kbd:hover{
+    animation: waggle .5s;
+}
+main > .wrapper > div > kbd:hover > button{
+    display: block;
+}
+main > .wrapper > div > kbd > button:hover{
+    background: white;
+    color: #000;
+    font-size: 16px;
+}
