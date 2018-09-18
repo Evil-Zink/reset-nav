@@ -49,7 +49,7 @@
                 localStorage.setItem('back-up', JSON.stringify(hash))
                 img.src = `http://${url}/favicon.ico`
                 img.onerror = function(){
-                    img.src='./img/no.jpg'
+                    img.src='./img/no.png'
                 }
             })
             kbd.appendChild(span)
